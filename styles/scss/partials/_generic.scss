@@ -5,6 +5,15 @@
   max-width: 1080px;
 }
 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection {
+  background: red;
+  color: white;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -12,7 +21,7 @@ a {
 }
 
 a:hover {
-  color: #000000;
+  color: red;
 }
 
 p {
