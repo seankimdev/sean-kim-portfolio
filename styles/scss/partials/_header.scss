@@ -1,11 +1,12 @@
 // header
 
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header-content {
-  padding-top: 100px;
+  padding-top: 130px;
+  margin-left: 25%;
 }
 
 // Nav Bar
@@ -15,8 +16,8 @@ header {
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: 50px 0;
-  background-color: rgba(255, 255, 255, 0.97);
+  padding: 25px 0;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 // Hamburger Menu
@@ -77,9 +78,12 @@ header {
 
 // Logo
 
+.logo-container {
+  margin-left: 20px;
+}
+
 .logo {
   width: 150px;
-  margin-left: 20px;
   font-size: 20px;
   font-weight: 600;
   color: $mainBlue;
@@ -88,11 +92,9 @@ header {
 }
 
 .intro-container {
-  margin-left: 25%;
-
   p {
-    font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1725 - 320)));
+    font-size: calc(2rem + (42 - 24) * ((100vw - 320px) / (1440 - 320)));
     line-height: 1.15;
-    margin-bottom: 50px;
+    margin-top: 60px;
   }
 }

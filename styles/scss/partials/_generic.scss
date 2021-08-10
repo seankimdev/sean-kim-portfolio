@@ -1,5 +1,6 @@
 .wrapper {
   width: 95%;
+  // margin-left: 2.5%;
   margin: 0 auto;
   max-width: 1080px;
 }
@@ -19,6 +20,11 @@ p {
   margin-bottom: 10px;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style-type: none;
 }
@@ -28,4 +34,13 @@ img {
   height: auto;
   vertical-align: middle;
   border: 0;
+}
+
+h2 {
+  border-top: 2px lightgrey solid;
+  padding: 25px 0;
+}
+
+h3 {
+  padding-bottom: 15px;
 }
