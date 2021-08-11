@@ -10,10 +10,18 @@
 
   <body>
     <div class="wrapper">
-      <header>
-        <div class="drawer"></div>
-
-        <div class="nav-bar">
+      <header id="home">
+        <div class="drawer-container wrapper">
+          <nav class="drawer">
+            <ul>
+              <li><a href="#home">Home Page</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nav-bar wrapper">
           <div class="menu-btn">
             <div class="burger"></div>
           </div>
@@ -26,7 +34,7 @@
           <h1>Welcome</h1>
           <div class="intro-container">
             <p>
-              I'm Sean. A front-end developer, engineer and project manager in
+              I'm Sean. A web developer, engineer and project manager in
               Toronto.
             </p>
             <p>
@@ -52,16 +60,15 @@
               </p>
               <p>
                 As a former engineering and operations manager from a fast-paced
-                manufacturing environment, I've put strong emphasis on working
-                together as
-                <em class="text-emphasis">'We'</em>, understanding root causes
-                by asking <em class="text-emphasis">'Why'</em>, and
-                strategically approaching each smaller problem to solve with
-                <em class="text-emphasis">'How'</em>.
+                manufacturing environment, my work puts strong emphasis on
+                working together as
+                <em>'We'</em>, understanding root causes by consistently asking
+                <em>'Why'</em>, and strategically solving each underlying
+                problem by defining <em>'How'</em>.
               </p>
               <p>
-                In my spare time, I love hiking, camping, travelling, and
-                listening to bossa nova!
+                Whenever I'm free, I love hiking, camping, travelling, and
+                photographing people and nature!
               </p>
             </div>
           </div>
@@ -161,8 +168,11 @@
           <h2>Contact Me</h2>
           <div class="contact-container">
             <div class="contact-left">
-              <address>Toronto, Ontario</address>
-              <a href="mailto: seankim0423@gmail.com">Send me email</a>
+              <address>
+                <p>Toronto, Ontario, Canada</p>
+                <p>seankim0423@gmail.com</p>
+                <a href="mailto: seankim0423@gmail.com">Send me an email</a>
+              </address>
             </div>
             <div class="contact-right">
               <ul>
@@ -174,7 +184,9 @@
           </div>
         </section>
       </main>
-      <footer><p>© 2021 Sean Kim</p></footer>
+      <footer>
+        <p>© 2021 Sean Kim. Designed with my wife, Chay.</p>
+      </footer>
     </div>
 
     <script src="./scripts/script.js"></script>

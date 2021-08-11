@@ -13,11 +13,17 @@ header {
 
 .nav-bar {
   display: flex;
+  width: 100%;
   align-items: center;
   position: fixed;
-  width: 100%;
-  padding: 25px 0;
+  padding: 25px 25px;
   background-color: rgba(255, 255, 255, 0.95);
+  z-index: 2;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-bar-black {
+  background-color: black;
 }
 
 // Hamburger Menu
@@ -91,9 +97,47 @@ header {
   text-transform: uppercase;
 }
 
+// drawer menu
+
+.drawer-container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: black;
+  // overflow-y: scroll;
+  transform: translateY(-100%);
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+
+  padding-top: 80px;
+  nav {
+    width: 100%;
+    ul {
+      padding: 0 25px;
+      li {
+        border-top: 2px solid white;
+        padding: 25px 0;
+        a {
+          color: white;
+          font-size: 3.5rem;
+        }
+        a:hover {
+          color: $highlightRed;
+        }
+      }
+    }
+  }
+}
+
+.open-drawer {
+  transform: translateY(0);
+}
+
 .intro-container {
   p {
-    font-size: calc(2rem + (42 - 24) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(2rem + (32 - 20) * ((100vw - 320px) / (1080 - 320)));
     line-height: 1.15;
     margin-top: 60px;
   }
@@ -114,7 +158,8 @@ header {
     font-weight: 600;
   }
   p {
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
+    font-size: calc(1.6rem + (17 - 16) * ((100vw - 320px) / (1080 - 320)));
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 30px;
@@ -134,6 +179,10 @@ header {
   width: calc(47.5%);
   min-width: 300px;
   flex-grow: 1;
+}
+
+.about-top {
+  align-items: center;
 }
 
 .about-skills {
@@ -196,6 +245,10 @@ header {
   width: calc(47.5%);
   min-width: 300px;
   flex-grow: 1;
+}
+
+.contact-left p {
+  margin: 0;
 }
 
 // Footer
