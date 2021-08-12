@@ -8,25 +8,28 @@
 // };
 
 const menuBtn = document.querySelector(".menu-btn");
+const drawerList = document.querySelectorAll(".drawer li");
 const drawer = document.querySelector(".drawer-container");
 const navBar = document.querySelector(".nav-bar");
+const docBody = document.querySelector("body");
+const darkModeButton = document.querySelector(".dark-mode-btn");
+const borderedListItems = document.querySelector(".bordered-list-items li");
+const aLinks = document.querySelectorAll(".drawer-container a");
+const arrowLink = document.querySelector(".arrow-link");
+
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
   if (!menuOpen) {
     menuBtn.classList.add("open");
     drawer.classList.add("open-drawer");
-    navBar.classList.add("nav-bar-black");
     menuOpen = true;
   } else {
     menuBtn.classList.remove("open");
     drawer.classList.remove("open-drawer");
-    navBar.classList.remove("nav-bar-black");
     menuOpen = false;
   }
 });
-
-const drawerList = document.querySelectorAll(".drawer li");
 
 drawerList.forEach((list) => {
   list.addEventListener("click", () => {
@@ -34,5 +37,15 @@ drawerList.forEach((list) => {
     drawer.classList.remove("open-drawer");
     navBar.classList.remove("nav-bar-black");
     menuOpen = false;
+  });
+});
+
+darkModeButton.addEventListener("click", () => {
+  docBody.classList.toggle("dark-mode");
+  navBar.classList.toggle("nav-dark-mode");
+  drawer.classList.toggle("dark-mode");
+  arrowLink.classList.toggle("dark-mode");
+  aLinks.forEach((aLink) => {
+    aLink.classList.toggle("dark-mode");
   });
 });

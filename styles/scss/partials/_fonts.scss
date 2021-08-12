@@ -14,6 +14,16 @@ body {
   font-weight: 300;
   color: black;
   line-height: 2.4rem;
+
+  .theme-light {
+    --color-background: white;
+    --color-font: black;
+  }
+
+  .theme-dark {
+    --color-background: black;
+    --color-font: white;
+  }
 }
 
 h1,
@@ -28,19 +38,19 @@ h5 {
 }
 
 h1 {
-  font-size: calc(4.5rem + (190 - 45) * ((100vw - 320px) / (1080 - 320)));
-  letter-spacing: -5px;
+  font-size: calc(4.5rem + (150 - 45) * ((100vw - 320px) / (1080 - 320)));
+  letter-spacing: 0px;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   h1 {
-    font-size: calc(5.5rem + (140 - 45) * ((100vw - 320px) / (840 - 320)));
+    font-size: calc(4.5rem + (140 - 45) * ((100vw - 320px) / (840 - 320)));
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1440px) {
   h1 {
-    font-size: 20rem;
+    font-size: 19rem;
   }
 }
 
@@ -59,6 +69,15 @@ h4 {
   font-size: 2.2rem;
 }
 
+p {
+  font-size: calc(1.4rem + (16 - 14) * ((100vw - 320px) / (1080 - 320)));
+}
+
 address {
   font-style: normal;
+}
+
+a {
+  font-size: 1.8rem;
+  font-weight: 500;
 }

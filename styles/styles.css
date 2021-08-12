@@ -284,6 +284,14 @@ body {
   color: black;
   line-height: 2.4rem;
 }
+body .theme-light {
+  --color-background: white;
+  --color-font: black;
+}
+body .theme-dark {
+  --color-background: black;
+  --color-font: white;
+}
 
 h1,
 h2,
@@ -296,18 +304,18 @@ h5 {
 }
 
 h1 {
-  font-size: calc(4.5rem + (190 - 45) * ((100vw - 320px) / (1080 - 320)));
-  letter-spacing: -5px;
+  font-size: calc(4.5rem + (150 - 45) * ((100vw - 320px) / (1080 - 320)));
+  letter-spacing: 0px;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   h1 {
-    font-size: calc(5.5rem + (140 - 45) * ((100vw - 320px) / (840 - 320)));
+    font-size: calc(4.5rem + (140 - 45) * ((100vw - 320px) / (840 - 320)));
   }
 }
-@media (min-width: 1080px) {
+@media (min-width: 1440px) {
   h1 {
-    font-size: 20rem;
+    font-size: 19rem;
   }
 }
 h2 {
@@ -325,12 +333,25 @@ h4 {
   font-size: 2.2rem;
 }
 
+p {
+  font-size: calc(1.4rem + (16 - 14) * ((100vw - 320px) / (1080 - 320)));
+}
+
 address {
   font-style: normal;
 }
 
+a {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
   max-width: 1080px;
 }
@@ -353,8 +374,8 @@ address::selection {
 a {
   color: black;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 a:hover,
@@ -389,7 +410,7 @@ h2 {
 }
 
 h3 {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 em {
@@ -398,6 +419,7 @@ em {
 
 header {
   min-height: 100vh;
+  position: relative;
 }
 
 .header-content {
@@ -409,16 +431,27 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  padding: 25px 25px;
+  padding: 25px 0;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 2;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-bar-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-bar-black {
@@ -512,11 +545,10 @@ header {
 
 .drawer-container {
   position: fixed;
-  width: 100%;
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: black;
+  background-color: white;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   z-index: 1;
@@ -529,15 +561,11 @@ header {
 .drawer-container nav {
   width: 100%;
 }
-.drawer-container nav ul {
-  padding: 0 25px;
-}
 .drawer-container nav ul li {
-  border-top: 2px solid white;
+  border-top: 2px solid;
   padding: 25px 0;
 }
 .drawer-container nav ul li a {
-  color: white;
   font-size: 3.5rem;
 }
 .drawer-container nav ul li a:hover {
@@ -555,9 +583,36 @@ header {
   margin-top: 60px;
 }
 
+.arrow-link {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  padding: 20px;
+  -webkit-transform: translateX(-35%);
+          transform: translateX(-35%);
+}
+
+.down-arrow {
+  border: solid;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+section,
+footer {
+  padding-top: 50px;
+  margin-top: 100px;
+}
+
 .about-section {
   min-height: 90vh;
-  padding-top: 90px;
+}
+
+.profile-img-container img {
+  border-radius: 5px;
 }
 
 .about-contents h4 {
@@ -578,7 +633,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5%;
+  gap: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -587,7 +642,7 @@ header {
 .about-top > *,
 .about-skills > * {
   width: calc(47.5%);
-  min-width: 300px;
+  min-width: 200px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -603,7 +658,7 @@ header {
   margin-top: 100px;
 }
 
-.about-skills ul {
+.bordered-list-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,11 +667,12 @@ header {
   gap: 10px;
 }
 
-.about-skills li {
+.bordered-list-items li {
   display: inline-block;
-  border: 1px solid black;
-  padding: 2px 5px;
-  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1px 5px;
+  border-radius: 3px;
   font-weight: 400;
 }
 
@@ -624,31 +680,33 @@ header {
   color: #ff4000;
 }
 
-.projects-section {
-  padding-top: 90px;
-}
-.projects-section li {
+.projects-section .projects-list > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5%;
+  gap: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
 }
-.projects-section li > * {
+.projects-section .projects-list > li > * {
   width: calc(47.5%);
-  min-width: 300px;
+  min-width: 200px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.projects-section .projects-list > li > * img {
+  border-radius: 10px;
+}
+.projects-section .projects-list > li > * p {
+  margin-top: 10px;
+}
 
 .contact-section {
-  padding-top: 90px;
   margin-bottom: 100px;
 }
 
@@ -658,7 +716,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5%;
+  gap: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -666,17 +724,46 @@ header {
 
 .contact-container > * {
   width: calc(47.5%);
-  min-width: 300px;
+  min-width: 200px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.contact-container a {
+  color: #005d8c;
+}
+
+.contact-container a:hover,
+.contact-container a:focus {
+  color: #ff4000;
 }
 
 .contact-left p {
   margin: 0;
 }
 
+.contact-right li {
+  margin-bottom: 10px;
+}
+
 footer {
   border-top: 2px lightgrey solid;
   padding-top: 10px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.nav-dark-mode {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+@media (max-width: 900px) {
+  .header-content {
+    margin-left: 0;
+  }
 }

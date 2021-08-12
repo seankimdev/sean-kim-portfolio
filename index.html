@@ -14,7 +14,7 @@
         <div class="drawer-container wrapper">
           <nav class="drawer">
             <ul>
-              <li><a href="#home">Home Page</a></li>
+              <li><a href="#home">Home</a></li>
               <li><a href="#about">About Me</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact Me</a></li>
@@ -22,12 +22,15 @@
           </nav>
         </div>
         <div class="nav-bar wrapper">
-          <div class="menu-btn">
-            <div class="burger"></div>
+          <div class="nav-bar-flexbox">
+            <div class="menu-btn">
+              <div class="burger"></div>
+            </div>
+            <div class="logo-container">
+              <a href="index.html"><span class="logo">Sean Kim</span> </a>
+            </div>
           </div>
-          <div class="logo-container">
-            <a href="index.html"><span class="logo">Sean Kim</span> </a>
-          </div>
+          <button class="dark-mode-btn">Dark Mode</button>
         </div>
 
         <div class="header-content">
@@ -38,11 +41,14 @@
               Toronto.
             </p>
             <p>
-              I live to design and build products that add values to our lives.
+              I help planning, designing and building products that add values
+              to our lives.
             </p>
           </div>
         </div>
+        <a href="#about" class="arrow-link"><i class="down-arrow"></i></a>
       </header>
+
       <main>
         <section id="about" class="about-section">
           <h2>About Me</h2>
@@ -60,22 +66,21 @@
               </p>
               <p>
                 As a former engineering and operations manager from a fast-paced
-                manufacturing environment, my work puts strong emphasis on
-                working together as
-                <em>'We'</em>, understanding root causes by consistently asking
-                <em>'Why'</em>, and strategically solving each underlying
-                problem by defining <em>'How'</em>.
+                manufacturing environment, I am a problem solver dedicated to
+                working together as <em>'We'</em>, understanding root causes by
+                questioning <em>'Why'</em>, and strategically solving each
+                underlying issue by defining <em>'How'</em>.
               </p>
               <p>
-                Whenever I'm free, I love hiking, camping, travelling, and
-                photographing people and nature!
+                When I'm free, you can find me hiking, camping, travelling, or
+                photographing out in the nature!
               </p>
             </div>
           </div>
           <div class="about-skills">
             <div class="web-dev-skills">
               <h3>Web Development Skills</h3>
-              <ul>
+              <ul class="bordered-list-items">
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>SCSS</li>
@@ -94,72 +99,92 @@
             </div>
             <div class="pm-skills">
               <h3>Other Skills</h3>
-              <ul>
+              <ul class="bordered-list-items">
                 <li>PMP® Project Management</li>
                 <li>Lean</li>
                 <li>Agile</li>
-                <li>Operations Management</li>
-                <li>Engineering Management</li>
+                <li>Leadership</li>
                 <li>Data Analysis</li>
+                <li>Mechanical Engineering</li>
               </ul>
             </div>
           </div>
         </section>
         <section id="projects" class="projects-section">
           <h2>Projects</h2>
-          <ul>
+          <ul class="projects-list">
             <li>
               <div class="project-img-container">
-                <img
-                  src="https://via.placeholder.com/600x400C/O https://placeholder.com/ "
-                  alt=""
-                />
+                <img src="./assets/quick-flick-pix.png" alt="" />
               </div>
               <div class="project-description-container">
-                <h3>Project 1 title</h3>
-                <p>React, SCSS, Firebase, RESTful API</p>
+                <h3>QuickFlickPix</h3>
+                <ul class="bordered-list-items">
+                  <li>React</li>
+                  <li>SCSS</li>
+                  <li>RESTful API</li>
+                  <li>Firebase</li>
+                </ul>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus repellat repudiandae placeat sapiente suscipit
-                  obcaecati, vel optio, laboriosam temporibus expedita, eveniet
-                  possimus ab. Eligendi ipsam beatae atque nesciunt, odio dolor.
+                  An app that helps users search for movies, add to and
+                  customize their own personal movie lists, and a movie picked
+                  based on their filter input. Features the use of React States
+                  and Routing to efficiently render, and update the multiple
+                  pages app.
                 </p>
               </div>
             </li>
             <li>
               <div class="project-img-container">
-                <img
-                  src="https://via.placeholder.com/600x400C/O https://placeholder.com/ "
-                  alt=""
-                />
+                <img src="./assets/camping-checklist-app.png" alt="" />
               </div>
               <div class="project-description-container">
-                <h3>Project 1 title</h3>
-                <p>React, SCSS, Firebase, RESTful API</p>
+                <h3>Camping Checklist</h3>
+                <ul class="bordered-list-items">
+                  <li>React</li>
+                  <li>SCSS</li>
+                  <li>Firebase</li>
+                </ul>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus repellat repudiandae placeat sapiente suscipit
-                  obcaecati, vel optio, laboriosam temporibus expedita, eveniet
-                  possimus ab. Eligendi ipsam beatae atque nesciunt, odio dolor.
+                  A checklist app to help you prepare for camping trips. Allows
+                  the user to add items into different categories. The data is
+                  stored in Firebase, which allows the user to share its access
+                  with their camping crew.
                 </p>
               </div>
             </li>
             <li>
               <div class="project-img-container">
-                <img
-                  src="https://via.placeholder.com/600x400C/O https://placeholder.com/ "
-                  alt=""
-                />
+                <img src="./assets/covid-travel-app.png " alt="" />
               </div>
               <div class="project-description-container">
-                <h3>Project 1 title</h3>
-                <p>React, SCSS, Firebase, RESTful API</p>
+                <h3>COVID19 Travel Info</h3>
+                <ul class="bordered-list-items">
+                  <li>HTML5</li>
+                  <li>SCSS</li>
+                  <li>JavaScript</li>
+                  <li>RESTful API</li>
+                </ul>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus repellat repudiandae placeat sapiente suscipit
-                  obcaecati, vel optio, laboriosam temporibus expedita, eveniet
-                  possimus ab. Eligendi ipsam beatae atque nesciunt, odio dolor.
+                  An app that helps you view up-to-date COVID19 data for your
+                  travel destination. The most recent data is pulled from the
+                  COVID19 RESTful API, and summarized to display important
+                  information, along with a graph of daily cases, created using
+                  pure CSS.
                 </p>
+              </div>
+            </li>
+            <li>
+              <div class="project-img-container">
+                <img src="./assets/mind-n-soul.png" alt="" />
+              </div>
+              <div class="project-description-container">
+                <h3>Mindn'Soul Studio</h3>
+                <ul class="bordered-list-items">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                </ul>
+                <p>A responsive and functional multi-page PSD conversion.</p>
               </div>
             </li>
           </ul>
@@ -170,22 +195,35 @@
             <div class="contact-left">
               <address>
                 <p>Toronto, Ontario, Canada</p>
-                <p>seankim0423@gmail.com</p>
-                <a href="mailto: seankim0423@gmail.com">Send me an email</a>
               </address>
             </div>
             <div class="contact-right">
               <ul>
-                <li><a href="">GitHub</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Twitter</a></li>
+                <li><a href="mailto: seankim0423@gmail.com">Email</a></li>
+                <li>
+                  <a href="https://github.com/seankimdev" target="_blank"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/seankimdev/"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a href="https://twitter.com/seanihkim" target="_blank"
+                    >Twitter</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
         </section>
       </main>
       <footer>
-        <p>© 2021 Sean Kim. Designed with my wife, Chay.</p>
+        <p>© 2021 Sean Kim. Designed with Chay Lee.</p>
       </footer>
     </div>
 
