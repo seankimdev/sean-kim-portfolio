@@ -20,7 +20,7 @@ header {
   align-items: center;
   position: fixed;
   padding: 25px 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-nav-background);
   z-index: 2;
   // transition: background-color 0.3s ease-in-out;
 }
@@ -112,10 +112,10 @@ header {
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: white;
+  background-color: var(--color-background);
   transform: translateY(-100%);
   z-index: 1;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 
   padding-top: 80px;
   nav {
@@ -125,7 +125,7 @@ header {
         border-top: 2px solid;
         padding: 25px 0;
         a {
-          // color: black;
+          color: var(--color-font);
           font-size: 3.5rem;
         }
         a:hover {
@@ -150,7 +150,7 @@ header {
 
 .arrow-link {
   position: absolute;
-  bottom: 20px;
+  bottom: 15%;
   left: 50%;
   padding: 20px;
   transform: translateX(-50%);
@@ -159,9 +159,13 @@ header {
 .down-arrow {
   border: solid;
   border-width: 0 5px 5px 0;
+  border-color: var(--color-font);
   display: inline-block;
   padding: 10px;
   transform: rotate(45deg);
+}
+.down-arrow:hover {
+  border-color: $highlightRed;
 }
 
 // Main
@@ -192,6 +196,8 @@ section {
     font-size: calc(1.6rem + (17 - 16) * ((100vw - 320px) / (1080 - 320)));
     line-height: 1.5;
     font-weight: 400;
+  }
+  p:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -230,14 +236,14 @@ section {
   // border: 1px solid black;
   border-width: 1px;
   border-style: solid;
-  padding: 1px 5px;
+  padding: 0 5px;
   border-radius: 3px;
   font-weight: 400;
 }
 
-.about-skills li:hover {
-  color: $highlightRed;
-}
+// .about-skills li:hover {
+//   color: $highlightRed;
+// }
 
 // End of About Section
 
@@ -249,7 +255,7 @@ section {
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 
     > * {
       width: calc(47.5%);
@@ -277,6 +283,13 @@ section {
   }
   .projects-list > li:last-child {
     margin-bottom: 0;
+  }
+
+  .project-header-container {
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
   }
 }
 // End of Projects Section

@@ -13,9 +13,6 @@ const drawer = document.querySelector(".drawer-container");
 const navBar = document.querySelector(".nav-bar");
 const docBody = document.querySelector("body");
 const darkModeButton = document.querySelector("#myonoffswitch");
-const borderedListItems = document.querySelector(".bordered-list-items li");
-const aLinks = document.querySelectorAll(".drawer-container a");
-const arrowLink = document.querySelector(".arrow-link");
 
 let menuOpen = false;
 
@@ -41,11 +38,6 @@ drawerList.forEach((list) => {
 });
 
 darkModeButton.addEventListener("click", () => {
-  docBody.classList.toggle("dark-mode");
-  navBar.classList.toggle("nav-dark-mode");
-  drawer.classList.toggle("dark-mode");
-  arrowLink.classList.toggle("dark-mode");
-  aLinks.forEach((aLink) => {
-    aLink.classList.toggle("dark-mode");
-  });
+  docBody.classList.toggle("theme-light");
+  docBody.classList.toggle("theme-dark");
 });

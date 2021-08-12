@@ -1,5 +1,22 @@
+.theme-light {
+  --color-background: white;
+  --color-nav-background: rgba(255, 255, 255, 0.95);
+  --color-font: black;
+}
+
+.theme-dark {
+  --color-background: black;
+  --color-font: white;
+  --color-nav-background: rgba(0, 0, 0, 0.9);
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-font);
 }
 
 .wrapper {
@@ -14,6 +31,7 @@ h2::selection,
 h3::selection,
 h4::selection,
 p::selection,
+li::selection,
 address::selection {
   background: $highlightRed;
   color: white;
@@ -32,7 +50,8 @@ a:focus {
 
 p {
   margin: 0;
-  margin-bottom: 10px;
+  padding: 0;
+  // margin-bottom: 10px;
 }
 
 ul {
@@ -65,4 +84,18 @@ h4 {
 
 em {
   font-weight: 600;
+}
+
+.fab {
+  font-size: 2rem;
+}
+
+.icon-container {
+  padding-bottom: 20px;
+  i {
+    color: var(--color-font);
+  }
+  i:hover {
+    color: $highlightRed;
+  }
 }
