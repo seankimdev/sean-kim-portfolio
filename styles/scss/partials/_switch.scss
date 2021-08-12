@@ -2,7 +2,7 @@
 
 .onoffswitch {
   position: relative;
-  width: 50px;
+  width: 46px;
 }
 .onoffswitch-checkbox {
   position: absolute;
@@ -13,7 +13,7 @@
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid #999999;
+  border: 1px solid #999999;
   border-radius: 50px;
 }
 .onoffswitch-inner {
@@ -52,13 +52,13 @@
 .onoffswitch-switch {
   display: block;
   width: 16px;
-  margin: 2px;
+  margin: 1px;
   background: #ffffff;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 31px;
-  border: 2px solid #999999;
+  right: 28px;
+  border: 1px solid #999999;
   border-radius: 50px;
   transition: all 0.3s ease-in 0s;
 }
