@@ -401,8 +401,7 @@ img {
 }
 
 h2 {
-  border-top: 2px lightgrey solid;
-  padding: 40px 0;
+  padding-bottom: 50px;
 }
 
 h3 {
@@ -597,10 +596,9 @@ header {
           transform: rotate(45deg);
 }
 
-section,
-footer {
-  padding-top: 50px;
-  margin-top: 100px;
+section {
+  border-top: 2px lightgrey solid;
+  padding: 100px 0;
 }
 
 .about-section {
@@ -686,7 +684,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .projects-section .projects-list > li > * {
   width: calc(47.5%);
@@ -701,9 +699,16 @@ footer {
 .projects-section .projects-list > li > * p {
   margin-top: 10px;
 }
-
-.contact-section {
-  margin-bottom: 100px;
+.projects-section .projects-list > li > * ul {
+  gap: 5px;
+}
+.projects-section .projects-list > li > * li {
+  font-size: 1.2rem;
+  padding: 0 3px;
+  color: gray;
+}
+.projects-section .projects-list > li:last-child {
+  margin-bottom: 0;
 }
 
 .contact-container {
@@ -797,7 +802,7 @@ footer p {
 
 .onoffswitch-inner:before {
   content: "ON";
-  padding-left: 5px;
+  padding-left: 8px;
   background-color: #ffffff;
   color: #000000;
 }
