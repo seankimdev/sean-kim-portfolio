@@ -769,10 +769,6 @@ section {
           flex-grow: 1;
 }
 
-.contact-container a {
-  color: #5c95bb;
-}
-
 .contact-container a:hover,
 .contact-container a:focus {
   color: #ff4000;
@@ -788,7 +784,7 @@ section {
 
 footer {
   border-top: 2px lightgrey solid;
-  padding-top: 10px;
+  padding: 5px;
 }
 
 footer p {
