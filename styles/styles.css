@@ -605,7 +605,7 @@ header {
 
 .arrow-link {
   position: absolute;
-  bottom: 8%;
+  bottom: 5%;
   left: 50%;
   padding: 20px;
   -webkit-transform: translateX(-50%);
@@ -886,6 +886,11 @@ footer p {
   background-color: rgba(0, 0, 0, 0.95);
 }
 
+@media (max-width: 450px) {
+  .arrow-link {
+    bottom: 10%;
+  }
+}
 @media (max-width: 900px) {
   .header-content {
     margin-left: 0;
