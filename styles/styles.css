@@ -378,7 +378,7 @@ address::selection {
 }
 
 a {
-  color: black;
+  color: var(--color-font);
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;

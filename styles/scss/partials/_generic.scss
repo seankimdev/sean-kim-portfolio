@@ -38,7 +38,7 @@ address::selection {
 }
 
 a {
-  color: black;
+  color: var(--color-font);
   text-decoration: none;
   transition: color 0.3s ease;
 }
