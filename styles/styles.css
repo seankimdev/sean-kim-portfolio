@@ -318,7 +318,7 @@ h2 {
 h3 {
   font-size: 2rem;
   font-weight: 500;
-  color: #005d8c;
+  color: #5c95bb;
 }
 
 p {
@@ -605,7 +605,7 @@ header {
 
 .arrow-link {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   left: 50%;
   padding: 20px;
   -webkit-transform: translateX(-50%);
@@ -622,7 +622,7 @@ header {
           transform: rotate(45deg);
 }
 
-.down-arrow:hover {
+.arrow-link:hover > i {
   border-color: #ff4000;
 }
 
@@ -690,7 +690,7 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .bordered-list-items li {
@@ -700,6 +700,7 @@ section {
   padding: 0 5px;
   border-radius: 3px;
   font-weight: 400;
+  font-size: 1.4rem;
 }
 
 .projects-section .projects-list > li {
@@ -708,7 +709,7 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -725,14 +726,12 @@ section {
   border-radius: 10px;
 }
 .projects-section .projects-list > li > * p {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .projects-section .projects-list > li > * ul {
   gap: 5px;
 }
 .projects-section .projects-list > li > * li {
-  font-size: 1.2rem;
-  padding: 0 3px;
   color: #646464;
 }
 .projects-section .projects-list > li:last-child {
@@ -771,7 +770,7 @@ section {
 }
 
 .contact-container a {
-  color: #005d8c;
+  color: #5c95bb;
 }
 
 .contact-container a:hover,

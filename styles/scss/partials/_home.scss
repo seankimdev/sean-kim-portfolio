@@ -150,7 +150,7 @@ header {
 
 .arrow-link {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   left: 50%;
   padding: 20px;
   transform: translateX(-50%);
@@ -164,7 +164,7 @@ header {
   padding: 10px;
   transform: rotate(45deg);
 }
-.down-arrow:hover {
+.arrow-link:hover > i {
   border-color: $highlightRed;
 }
 
@@ -228,7 +228,7 @@ section {
 .bordered-list-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .bordered-list-items li {
@@ -239,6 +239,7 @@ section {
   padding: 0 5px;
   border-radius: 3px;
   font-weight: 400;
+  font-size: 1.4rem;
 }
 
 // .about-skills li:hover {
@@ -253,7 +254,7 @@ section {
   .projects-list > li {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px 40px;
     justify-content: center;
     margin-bottom: 100px;
 
@@ -267,7 +268,7 @@ section {
       }
 
       p {
-        margin-top: 10px;
+        margin-top: 20px;
       }
 
       ul {
@@ -275,8 +276,6 @@ section {
       }
 
       li {
-        font-size: 1.2rem;
-        padding: 0 3px;
         color: rgb(100, 100, 100);
       }
     }
