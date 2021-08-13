@@ -16,7 +16,7 @@ const darkModeButton = document.querySelector("#myonoffswitch");
 
 let menuOpen = false;
 
-menuBtn.addEventListener("click", () => {
+const navMenuOpen = () => {
   if (!menuOpen) {
     menuBtn.classList.add("open");
     drawer.classList.add("open-drawer");
@@ -25,6 +25,13 @@ menuBtn.addEventListener("click", () => {
     menuBtn.classList.remove("open");
     drawer.classList.remove("open-drawer");
     menuOpen = false;
+  }
+};
+
+menuBtn.addEventListener("click", navMenuOpen);
+menuBtn.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    navMenuOpen();
   }
 });
 

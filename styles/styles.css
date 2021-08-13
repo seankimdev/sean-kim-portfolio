@@ -385,7 +385,8 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus,
+a:focus > i {
   color: #ff4000;
 }
 
@@ -622,7 +623,8 @@ header {
           transform: rotate(45deg);
 }
 
-.arrow-link:hover > i {
+.arrow-link:hover > i,
+.arrow-link:focus > i {
   border-color: #ff4000;
 }
 
@@ -794,6 +796,12 @@ footer p {
 .onoffswitch {
   position: relative;
   width: 46px;
+}
+
+.onoffswitch-label:hover,
+.onoffswitch-checkbox:focus + .onoffswitch-label {
+  -webkit-box-shadow: 0px 0px 5px #ff4000;
+          box-shadow: 0px 0px 5px #ff4000;
 }
 
 .onoffswitch-checkbox {
