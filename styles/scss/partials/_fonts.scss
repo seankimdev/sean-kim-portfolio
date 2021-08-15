@@ -41,20 +41,15 @@ h1 {
 @media (min-width: 1440px) {
   h1 {
     font-size: 19rem;
-    font-weight: 500;
   }
 }
 
 h2 {
-  font-size: 3.5rem;
   font-size: calc(3rem + (35 - 30) * ((100vw - 320px) / (1080 - 320)));
-  font-weight: 500;
 }
 
 h3 {
-  font-size: 3rem;
-  font-size: calc(2.5rem + (30 - 25) * ((100vw - 320px) / (1080 - 320)));
-  font-weight: 500;
+  font-size: calc(2.5rem + (25 - 25) * ((100vw - 320px) / (1080 - 320)));
   color: $secondaryColor;
 }
 
