@@ -18,11 +18,23 @@
       <header id="home">
         <div class="nav-bar wrapper">
           <div class="nav-bar-flexbox">
-            <div class="menu-btn-container">
+            <div class="menu-btn-container" tabindex="0">
               <div class="menu-btn" aria-label="menu">
                 <div class="burger"></div>
               </div>
             </div>
+
+            <div class="drawer-container wrapper">
+              <nav class="drawer">
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About Me</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#contact">Contact Me</a></li>
+                </ul>
+              </nav>
+            </div>
+
             <div class="logo-container">
               <a href="index.html"><span class="logo">Sean Kim</span> </a>
             </div>
@@ -31,7 +43,7 @@
           <div class="dark-mode-btn onoffswitch">
             <input
               type="checkbox"
-              name="onoffswitch"
+              name="myonoffswitch"
               class="onoffswitch-checkbox"
               id="myonoffswitch"
               tabindex="0"
@@ -45,16 +57,7 @@
           </div>
           <!-- </button> -->
         </div>
-        <div class="drawer-container wrapper">
-          <nav class="drawer">
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact Me</a></li>
-            </ul>
-          </nav>
-        </div>
+
         <div class="header-content">
           <h1>Welcome</h1>
           <div class="intro-container">

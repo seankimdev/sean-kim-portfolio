@@ -7,7 +7,7 @@
 //   gear2.transform = "rotate(-" + window.scrollY * 2.5 + "deg)";
 // };
 
-const menuBtn = document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".menu-btn-container");
 const drawerList = document.querySelectorAll(".drawer li");
 const drawer = document.querySelector(".drawer-container");
 const navBar = document.querySelector(".nav-bar");
@@ -44,7 +44,15 @@ drawerList.forEach((list) => {
   });
 });
 
-darkModeButton.addEventListener("click", () => {
+const darkmode = () => {
   docBody.classList.toggle("theme-light");
   docBody.classList.toggle("theme-dark");
+};
+
+darkModeButton.addEventListener("click", darkmode);
+darkModeButton.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    this.checked = !this.checked;
+    darkmode();
+  }
 });

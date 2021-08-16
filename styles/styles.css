@@ -344,6 +344,11 @@ a {
   --color-nav-background: rgba(0, 0, 0, 0.9);
 }
 
+*:focus {
+  -webkit-box-shadow: 0px 0px 5px #ff4000;
+          box-shadow: 0px 0px 5px #ff4000;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -567,13 +572,16 @@ header {
   right: 0;
   height: 100vh;
   background-color: var(--color-background);
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  z-index: 1;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  visibility: hidden;
+  z-index: -1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition-property: visibility, -webkit-transform;
+  transition-property: visibility, -webkit-transform;
+  transition-property: transform, visibility;
+  transition-property: transform, visibility, -webkit-transform;
   padding-top: 80px;
 }
 .drawer-container nav {
@@ -584,7 +592,6 @@ header {
   padding: 25px 0;
 }
 .drawer-container nav ul li a {
-  color: var(--color-font);
   font-size: 3.5rem;
 }
 .drawer-container nav ul li a:hover {
@@ -592,8 +599,9 @@ header {
 }
 
 .open-drawer {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(45%);
+          transform: translateY(45%);
+  visibility: visible;
 }
 
 .intro-container p {
