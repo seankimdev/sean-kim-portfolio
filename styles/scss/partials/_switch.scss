@@ -2,7 +2,7 @@
 
 .onoffswitch {
   position: relative;
-  width: 80px;
+  width: 53px;
 }
 
 .onoffswitch-label:hover,
@@ -42,13 +42,13 @@
   box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-  content: "Day Mode";
+  content: "Day";
   padding-left: 8px;
   background-color: #ffffff;
   color: #000000;
 }
 .onoffswitch-inner:after {
-  content: "Night Mode";
+  content: "Night";
   padding-right: 5px;
   background-color: #000000;
   color: #ffffff;
@@ -62,7 +62,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 62px;
+  right: 35px;
   border: 1px solid #999999;
   border-radius: 50px;
   transition: all 0.3s ease-in 0s;
