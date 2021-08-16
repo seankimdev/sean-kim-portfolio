@@ -1,13 +1,5 @@
-// // Reference: https://codepen.io/Azametzin/pen/NBZaby
-
-// var gear1 = document.querySelector(".gear1").style;
-// gear2 = document.querySelector(".gear2").style;
-// window.onscroll = function rotateGear() {
-//   gear1.transform = "rotate(" + window.scrollY * 2.5 + "deg)";
-//   gear2.transform = "rotate(-" + window.scrollY * 2.5 + "deg)";
-// };
-
-const menuBtn = document.querySelector(".menu-btn-container");
+const menuBtnContainer = document.querySelector(".menu-btn-container");
+const menuBtn = document.querySelector(".menu-btn");
 const drawerList = document.querySelectorAll(".drawer li");
 const drawer = document.querySelector(".drawer-container");
 const navBar = document.querySelector(".nav-bar");
@@ -28,8 +20,8 @@ const navMenuOpen = () => {
   }
 };
 
-menuBtn.addEventListener("click", navMenuOpen);
-menuBtn.addEventListener("keyup", function (event) {
+menuBtnContainer.addEventListener("click", navMenuOpen);
+menuBtnContainer.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     navMenuOpen();
   }
